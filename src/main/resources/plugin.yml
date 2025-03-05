@@ -1,0 +1,44 @@
+name: AutoMessage
+version: '${project.version}'
+main: org.denzyve.automessage.AutoMessage
+api-version: '1.21'
+description: A lightweight and customizable auto-message plugin for Minecraft servers.
+
+commands:
+  automessage:
+    description: Main command for AutoMessage plugin
+    usage: |
+      /<command> status - Shows plugin status
+      /<command> toggle - Enable/disable the plugin
+      /<command> reload - Reload the configuration
+      /<command> debug - Toggle debug mode
+    aliases: [am]
+
+permissions:
+  automessage.admin:
+    description: Gives access to all AutoMessage commands
+    default: op
+    children:
+      automessage.status: true
+      automessage.toggle: true
+      automessage.reload: true
+      automessage.debug: true
+      automessage.update: true
+  automessage.status:
+    description: Allows checking the plugin status
+    default: op
+  automessage.toggle:
+    description: Allows enabling/disabling the plugin
+    default: op
+  automessage.reload:
+    description: Allows reloading the plugin configuration
+    default: op
+  automessage.debug:
+    description: Allows toggling debug mode
+    default: op
+  automessage.update:
+    description: Allows receiving update notifications
+    default: op
+  automessage.send:
+    description: Allows send an any message for test
+    default: op

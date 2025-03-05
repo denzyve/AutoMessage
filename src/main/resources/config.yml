@@ -1,0 +1,58 @@
+# ======================================
+# AutoMessage Configuration
+# ======================================
+# Plugin Version: ${project.version}
+#
+# This configuration file controls all aspects of the plugin.
+
+# ======================================
+# General Settings
+# ======================================
+
+# Master switch to enable or disable the plugin (not work yet)
+enabled: true
+
+# ======================================
+# Plugin Specific Settings
+# ======================================
+
+send-messages:
+  msg1:
+    # Enable or disable sending this message
+    enabled: true
+
+    # Interval send messages (in seconds)
+    interval: 60
+
+    # Messages to send, use only array of the lines of messages.
+    messages:
+      - "&6&m--------------------------------------------------"
+      - "&e&lAutoMessage Plugin &7- &aVersion 1.0"
+      - "&bThis server uses an automated message system!"
+      - "&7Customize messages &6&lconfig.yml &7to suit your needs."
+      - "&6&m--------------------------------------------------"
+  example-of-message:
+    enabled: false
+    interval: 30
+    messages:
+      - 'one line another test text'
+
+# ======================================
+# Update Checker Settings
+# ======================================
+
+# Enable the update checker
+update-checker:
+  # Enable or disable the update checker
+  enabled: true
+  
+  # Notify admins when they join if an update is available
+  notify-admins: true
+
+# ======================================
+# Advanced Settings
+# ======================================
+
+# Debug mode - when enabled, additional information will be printed to the console
+# Only enable this when troubleshooting issues
+debug: false
